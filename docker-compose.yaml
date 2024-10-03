@@ -5,6 +5,7 @@ services:
     build:
       context: ./web
       dockerfile: Dockerfile
+    image: ${DOCKER_USERNAME}/nextjs:dev
     container_name: nextjs-dev
     volumes:
       - ./web:/app
@@ -16,6 +17,7 @@ services:
     build:
       context: ./server
       dockerfile: Dockerfile
+    image: ${DOCKER_USERNAME}/nestjs:dev
     container_name: nestjs-dev
     volumes:
       - ./server:/app
