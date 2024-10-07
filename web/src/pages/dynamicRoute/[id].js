@@ -1,19 +1,19 @@
 // import { useRouter } from 'next/router';
 
-export async function getStaticPaths() {
-  const paths = [
-    { params: { id: '1' } },
-    { params: { id: '2' } },
-    { params: { id: '3' } },
-    { params: { id: '4' } },
-    { params: { id: '5' } },
-  ];
+// export async function getStaticPaths() {
+//   const paths = [
+//     { params: { id: '1' } },
+//     { params: { id: '2' } },
+//     { params: { id: '3' } },
+//     { params: { id: '4' } },
+//     { params: { id: '5' } },
+//   ];
 
-  return {
-    paths,
-    fallback: false,
-  };
-}
+//   return {
+//     paths,
+//     fallback: false,
+//   };
+// }
 
 export async function getServerSideProps({ params }) {
   const { id } = params;
